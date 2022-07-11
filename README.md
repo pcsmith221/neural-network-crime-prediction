@@ -1,2 +1,11 @@
-# neural-network-crime-prediction
-This student project recreates the work done in "Applied Machine Learning in Social Sciences: Neural Networks and Crime Prediction" by Reier Forradellas using calls for service data in San Antonio
+# Calls for Service Prediction Using a Neural Network 
+This Python Jupyter notebook follows the paper "Applied Machine Learning in Social Sciences: Neural Networks and Crime Prediction" by Reier Forradellas et al. to create a neural network for prediciton of calls for service to the San Antonio police department for crimes against persons, including assault and robbery. The motivation was not to create a product for the police, but rather to explore crime in the city in a way that traditional statistics cannot, and learn more about neural networks at a high level using the Keras API. 
+
+The dataset includes calls between May 1st 2021 and April 30th 2022, and includes over 100,000 records before preprocessing. The data used in this project can be found in the "CallData" folder. The source of the data is the "Historical Calls" database found on https://www.sanantonio.gov/SAPD/. Only one month of data could be viewed at a time, and certain months exceeded the download limit, so they are grouped together within the code. The Jupyter notebook walks through the process of preprocessing the data, training the neural network, and evaluating the model. Future work would include creating an interactive dashboard to better visualize the data/model and make predictions easier to enter. The model could also be taken through the process of hyperparameter tuning to potentially improve performance, as the current parameters were taken from the literature due to time constraints. 
+
+This project was completed as part of the CS 4315 Artificial Intelligence & Machine Learning class at St. Mary's University (StMU) SATX under the supervision of Dr. Bokaei. The PowerPoint slide deck was presented at the Spring 2022 Computer Science Symposium at StMU to a panel of local computer science professionals and won the award for best presentation of the Artificial Intelligence class. 
+
+### Troubleshooting
+The Jupyter notebook must be in the same directory as the "CallData" folder for the datasheets to be read in properly. You may need to pip install the xlrd library for Python to recognize the .xls files. 
+
+The Keras API may not work by default on M1 Macs. If you have an M1 Mac and the Python kernel dies upon importing Keras, you can follow the instructions put together by Dr. Heaton at Washington University, found here: https://github.com/jeffheaton/t81_558_deep_learning/blob/master/install/tensorflow-install-mac-metal-jul-2021.ipynb. 
